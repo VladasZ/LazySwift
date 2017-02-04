@@ -110,6 +110,37 @@ public extension UIView {
         }
     }
     
+    func centerInSuperview() {
+        
+        if let superview = self.superview {
+            
+            var frame = self.frame
+            frame.x = superview.width / 2 - self.width / 2
+            frame.y = superview.height / 2 - self.height / 2
+            self.frame = frame
+        }
+    }
+    
+    func horizontalCenterInSuperview() {
+        
+        if let superview = self.superview {
+            
+            var frame = self.frame
+            frame.x = superview.width / 2 - self.width / 2
+            self.frame = frame
+        }
+    }
+    
+    func varticalCenterInSuperview() {
+        
+        if let superview = self.superview {
+            
+            var frame = self.frame
+            frame.y = superview.height / 2 - self.height / 2
+            self.frame = frame
+        }
+    }
+    
     //MARK: - Other
     
     func removeDummies() {
