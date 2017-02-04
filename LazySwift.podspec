@@ -6,6 +6,9 @@ s.homepage       = "https://github.com/VladasZ/LazySwift"
 s.author         = { 'Vladas Zakrevskis' => '146100@gmail.com' }
 s.source         = { :git => 'https://github.com/VladasZ/LazySwift', :tag => s.version }
 s.ios.deployment_target = '8.0'
-s.source_files   = 'Sources/**/*.swift'
+s.source_files   = 'Sources/Math/*.swift'
+s.source_files   = 'Sources/UI/*.swift'
+s.source_files   = 'Sources/UI/CGGeometry/*.swift'
+s.source_files   = 'Sources/UI/Views/*.swift'
 s.license        = 'MIT'
 end
