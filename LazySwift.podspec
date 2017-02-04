@@ -8,4 +8,4 @@ s.source         = { :git => 'https://github.com/VladasZ/LazySwift', :tag => s.v
 s.ios.deployment_target = '8.0'
 s.source_files   = 'Sources/**/*.swift'
 s.license        = 'MIT'
-en
+end
