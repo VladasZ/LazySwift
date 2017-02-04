@@ -14,4 +14,9 @@ public extension Int {
         
         return CoreGraphics.CGFloat(self)
     }
+    
+    var Double:Double {
+        
+        return Swift.Double(self)
+    }
 }
