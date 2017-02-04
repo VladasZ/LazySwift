@@ -34,7 +34,7 @@ public extension CGRect {
         set { size.height = newValue }
     }
     
-    init(_ width:CGFloat, _ height:CGFloat) {
+    init(width:CGFloat, height:CGFloat) {
         
         self.init(x:0, y:0, width:width, height:height)
     }
