@@ -131,7 +131,7 @@ public extension UIView {
         }
     }
     
-    func varticalCenterInSuperview() {
+    func verticalCenterInSuperview() {
         
         if let superview = self.superview {
             
