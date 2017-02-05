@@ -2,7 +2,7 @@
 ## Why use this?
 ### Views positioning
 
-Currently you type:
+To create a view 100x100 with color RGB(100, 100, 100) and center it you'll have to type:
 ```swift
 let bomjView = UIView(frame:CGRect(x:0, y:0, width:100, height:100))
 bomjView.backgroundColor = UIColor(red: 100 / 255, green: 100 / 255, blue: 100 / 255, alpha: 1)
