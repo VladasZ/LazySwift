@@ -1,5 +1,7 @@
 # LazySwift
 ## Why use this?
+### Views positioning
+
 Currently you type:
 ```swift
 let bomjView = UIView(frame:CGRect(x:0, y:0, width:100, height:100))
@@ -19,3 +21,23 @@ eliteView.backgroundColor = UIColor(100, 100, 100)
 view.addSubview(eliteView)
 eliteView.centerInSuperview()
 ```
+
+### Let's see what happens if we want to create a random color
+
+*Vanilla*
+```swift
+let randomColor = UIColor(red:   CGFloat(Double(arc4random_uniform(255)) / 255.0),
+                                  green: CGFloat(Double(arc4random_uniform(255)) / 255.0),
+                                  blue:  CGFloat(Double(arc4random_uniform(255)) / 255.0),
+                                  alpha: 1.0)
+```
+![alt tag](http://i.imgur.com/6GQtJtY.png)
+
+*LazySwift*
+```swift
+let randomColor = UIColor.random
+```
+![alt tag](http://i.imgur.com/WSQZY1R.png)
+
+
+
