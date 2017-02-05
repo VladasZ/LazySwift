@@ -34,6 +34,11 @@ public extension UIView {
         self.init(frame:CGRect(x, y, width, height))
     }
     
+    convenience init(width:CGFloat, height:CGFloat) {
+        
+        self.init(CGRect(0, 0, width, height))
+    }
+    
     //MARK: - Geometry
     
     var width:CGFloat {
