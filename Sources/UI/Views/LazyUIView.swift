@@ -146,6 +146,15 @@ public extension UIView {
         }
     }
     
+    //MARK: - Subviews managing
+    
+    func addSubview(init:(UIView) -> ()) {
+        
+        let view = UIView()
+        self.addSubview(view)
+        `init`(view)
+    }
+    
     //MARK: - Other
     
     func removeDummies() {
