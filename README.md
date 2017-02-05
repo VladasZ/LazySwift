@@ -7,6 +7,40 @@
 [![CocoaPods](https://img.shields.io/badge/license-MIT-lightgray.svg)](https://github.com/Khmelevsky/QuickForms/blob/master/LICENSE)
 
 ## Why use this?
+
+### Lazy frames editing
+
+#### CGrect
+
+*Vanilla*
+```swift
+var rect = CGRect.zero
+rect.size.width = 100
+```
+*LazySwift*
+```swift
+var rect = CGRect.zero
+rect.width = 100
+```
+
+#### UIView
+
+*Vanilla*
+```swift
+let view = UIView()
+var frame = view.frame
+frame.size.width = 100
+view.frame = frame
+```
+*LazySwift*
+```swift
+let view = UIView()
+view.width = 100
+```
+
+
+
+
 ### Views positioning
 
 To create a view 100x100 with color RGB(100, 100, 100) and center it you'll have to type:
