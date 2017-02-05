@@ -13,6 +13,8 @@ bomjFrame.origin.x = (bomjView.superview?.frame.size.width)! / 2 - bomjView.fram
 bomjFrame.origin.y = (bomjView.superview?.frame.size.height)! / 2 - bomjView.frame.size.height / 2
 bomjView.frame = bomjFrame
 ```
+![alt tag](http://i.imgur.com/6gNA4Gc.png)
+
 
 With LazySwift it becomes:
 ```swift
@@ -21,6 +23,8 @@ eliteView.backgroundColor = UIColor(100, 100, 100)
 view.addSubview(eliteView)
 eliteView.centerInSuperview()
 ```
+![alt tag](http://i.imgur.com/IHOs86h.png)
+
 
 ### Let's see what happens if we want to create a random color
 
