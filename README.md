@@ -26,10 +26,10 @@ eliteView.centerInSuperview()
 
 *Vanilla*
 ```swift
-let randomColor = UIColor(red:   CGFloat(Double(arc4random_uniform(255)) / 255.0),
-                                  green: CGFloat(Double(arc4random_uniform(255)) / 255.0),
-                                  blue:  CGFloat(Double(arc4random_uniform(255)) / 255.0),
-                                  alpha: 1.0)
+let randomColor = UIColor(red: CGFloat(Double(arc4random_uniform(255)) / 255.0),
+                        green: CGFloat(Double(arc4random_uniform(255)) / 255.0),
+                         blue:  CGFloat(Double(arc4random_uniform(255)) / 255.0),
+                        alpha: 1.0)
 ```
 ![alt tag](http://i.imgur.com/6GQtJtY.png)
 
