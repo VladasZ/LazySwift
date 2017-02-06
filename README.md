@@ -61,7 +61,20 @@ let view = UIView()
 view.width = 100
 ```
 
-### Let's see what happens if we want to create a random color
+### Loading custom view:
+*Vanilla*
+```swift
+ let customView = 
+ UINib(nibName: "CustomView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! CustomView
+
+```
+*LazySwift*
+```swift
+let customView = viewNamed("CustomView") as! CustomView
+```
+
+
+### Random color
 
 *Vanilla*
 ```swift
