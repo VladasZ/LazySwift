@@ -72,7 +72,30 @@ view.width = 100
 ```swift
 let customView = viewNamed("CustomView") as! CustomView
 ```
+### More convinient types casting
 
+*Vanilla*
+```swift
+let double = Double(5)
+let float  = CGFloat(5)
+```
+*LazySwift*
+```swift
+let double = 5.Double
+let float  = 5.CGFloat
+```
+### Lazy random returning Int
+
+*Vanilla*
+```swift
+  let rand    = arc4random()
+  let uniform = arc4random_uniform(100)
+```
+*LazySwift*
+```swift
+let rand    = random()
+let uniform = random(100)
+```
 
 ### Random color
 
