@@ -126,7 +126,7 @@ public extension UIView {
         }
     }
     
-    func horizontalCenterInSuperview() {
+    func centerHorizontallyInSuperview() {
         
         if let superview = self.superview {
             
@@ -136,7 +136,7 @@ public extension UIView {
         }
     }
     
-    func verticalCenterInSuperview() {
+    func centerVerticallyInSuperview() {
         
         if let superview = self.superview {
             
