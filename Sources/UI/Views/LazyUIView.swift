@@ -155,6 +155,19 @@ public extension UIView {
         `init`(view)
     }
     
+    func subviewWith(tag:Int) -> UIView? {
+        
+        for subview in self.subviews {
+            
+            if subview.tag == tag {
+                
+                return subview
+            }
+        }
+        
+        return nil
+    }
+    
     //MARK: - Other
     
     func removeDummies() {
