@@ -21,4 +21,12 @@ public extension Array {
             return nil
         }
     }
+    
+    func enumerate(_ enumerate:(Element) -> ()) {
+        
+        for element in self {
+            
+            enumerate(element)
+        }
+    }
 }
