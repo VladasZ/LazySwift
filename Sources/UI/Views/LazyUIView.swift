@@ -168,6 +168,13 @@ public extension UIView {
         return nil
     }
     
+    //MARK: - Animation
+    
+    class func animate(withDuration duration: TimeInterval, _ animations: @escaping @autoclosure () -> Void) {
+        
+        UIView.animate(withDuration: duration, animations: animations)
+    }
+    
     //MARK: - Other
     
     func removeDummies() {
