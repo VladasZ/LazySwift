@@ -43,10 +43,7 @@ public extension UIView {
     
     var width:CGFloat {
         
-        get {
-            
-            return self.frame.size.width
-        }
+        get { return self.frame.size.width }
         set {
             
             var frame = self.frame
@@ -57,10 +54,7 @@ public extension UIView {
     
     var height:CGFloat {
         
-        get {
-            
-            return self.frame.size.height
-        }
+        get { return self.frame.size.height }
         set {
             
             var frame = self.frame
@@ -71,10 +65,7 @@ public extension UIView {
     
     var x:CGFloat {
         
-        get {
-            
-            return self.frame.origin.x
-        }
+        get { return self.frame.origin.x }
         set {
             
             var frame = self.frame
@@ -85,10 +76,7 @@ public extension UIView {
     
     var y:CGFloat {
         
-        get {
-            
-            return self.frame.origin.y
-        }
+        get { return self.frame.origin.y }
         set {
             
             var frame = self.frame
@@ -110,7 +98,6 @@ public extension UIView {
     func stickToBottom() {
         
         if let superview = self.superview {
-            
             self.y = superview.height - self.height
         }
     }
@@ -158,9 +145,18 @@ public extension UIView {
     func subviewWith(tag:Int) -> UIView? {
         
         for subview in self.subviews {
-            
             if subview.tag == tag {
-                
+                return subview
+            }
+        }
+        
+        return nil
+    }
+    
+    func subviewOfType(_ type:UIView.Type) -> UIView? {
+        
+        for subview in subviews {
+            if subview.isKind(of: type) {
                 return subview
             }
         }
