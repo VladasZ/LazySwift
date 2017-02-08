@@ -34,6 +34,11 @@ public extension CGRect {
         set { size.height = newValue }
     }
     
+    var withZeroOrigin:CGRect {
+        
+        return CGRect(0, 0, width, height)
+    }
+    
     init(width:CGFloat, height:CGFloat) {
         
         self.init(x:0, y:0, width:width, height:height)
