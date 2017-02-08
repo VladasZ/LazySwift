@@ -14,7 +14,7 @@ func viewNamed(_ nibName: String, bundle : Bundle? = nil) -> UIView? {
     return UINib(nibName: nibName, bundle: bundle).instantiate(withOwner: nil, options: nil)[0] as? UIView
 }
 
-public var window:UIView {
+func window() -> UIView {
     
     return UIApplication.shared.keyWindow as! UIView
 }
