@@ -6,9 +6,9 @@
 //  Copyright © 2017 Vladas Zakrevskis. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-func countryName(from countryCode: String) -> String {
+public func countryName(from countryCode: String) -> String {
     
     if let name = (Locale.current as NSLocale).displayName(forKey: .countryCode, value: countryCode) {
         return name
@@ -17,3 +17,9 @@ func countryName(from countryCode: String) -> String {
         return countryCode
     }
 }
+
+public func openSettings() {
+    
+    UIApplication.shared.openURL(NSURL(string:UIApplicationOpenSettingsURLString)! as URL)
+}
+
