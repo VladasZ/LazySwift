@@ -18,3 +18,19 @@ public func presentViewController(_ controller:UIViewController, animated:Bool =
     
     topController?.present(controller, animated: animated, completion: nil)
 }
+
+var topmostController:UIViewController?
+{
+    var topController = UIApplication.shared.keyWindow?.rootViewController;
+    
+    while topController?.presentedViewController != nil {
+        topController = topController?.presentedViewController;
+    }
+    
+    return topController
+}
+
+public var keyWindow:UIView {
+    
+    return UIApplication.shared.keyWindow as! UIView
+}
