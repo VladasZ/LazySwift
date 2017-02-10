@@ -13,9 +13,9 @@ public extension Lazy {
     
     public struct alert {
         
-        static var cancelLabel:String = "Cancel"
-        static var agreeLabel:String = "OK"
-        static var errorLabel:String = "Error"
+        public static var cancelLabel:String = "Cancel"
+        public static var agreeLabel:String = "OK"
+        public static var errorLabel:String = "Error"
         
         public static func show(_ message:String) {
             

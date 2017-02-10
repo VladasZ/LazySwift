@@ -9,7 +9,7 @@
 import UIKit
 
 public class Lazy {
-
+    
     public static func countryName(from countryCode: String) -> String {
         
         if let name = (Locale.current as NSLocale).displayName(forKey: .countryCode, value: countryCode) {
