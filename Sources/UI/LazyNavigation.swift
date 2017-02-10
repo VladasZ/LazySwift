@@ -8,29 +8,28 @@
 
 import UIKit
 
-public func presentViewController(_ controller:UIViewController, animated:Bool = true) {
+public extension Lazy {
     
-    var topController = UIApplication.shared.keyWindow?.rootViewController
-    
-    while((topController!.presentedViewController) != nil) {
-        topController = topController!.presentedViewController
+    public static var topmostController:UIViewController?
+    {
+        var topController = UIApplication.shared.keyWindow?.rootViewController;
+        
+        while topController?.presentedViewController != nil {
+            topController = topController?.presentedViewController;
+        }
+        
+        return topController
     }
     
-    topController?.present(controller, animated: animated, completion: nil)
-}
-
-public var topmostController:UIViewController?
-{
-    var topController = UIApplication.shared.keyWindow?.rootViewController;
-    
-    while topController?.presentedViewController != nil {
-        topController = topController?.presentedViewController;
+    public static var keyWindow:UIView {
+        
+        return UIApplication.shared.keyWindow as! UIView
     }
     
-    return topController
+    public static func presentViewController(_ controller:UIViewController, animated:Bool = true) {
+        
+        topmostController?.present(controller, animated: animated, completion: nil)
+    }
 }
 
-public var keyWindow:UIView {
-    
-    return UIApplication.shared.keyWindow as! UIView
-}
+

@@ -9,28 +9,35 @@
 import UIKit
 
 
-public class LazyAlert {
+public extension Lazy {
     
-    public static func show(_ message:String) {
+    public struct alert {
         
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        static var cancelLabel:String = "Cancel"
+        static var agreeLabel:String = "OK"
+        static var errorLabel:String = "Error"
         
-        topmostController?.present(alert, animated: true, completion: nil)
-    }
-    
-    public static func error(_ message:String) {
+        public static func show(_ message:String) {
+            
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: agreeLabel, style: .default, handler: nil))
+            
+            topmostController?.present(alert, animated: true, completion: nil)
+        }
         
-        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        topmostController?.present(alert, animated: true, completion: nil)
-    }
-    
-    public static func question(_ message:String, agreeTitle:String, action:@escaping () -> ()) {
+        public static func error(_ message:String) {
+            
+            let alert = UIAlertController(title: errorLabel, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: agreeLabel, style: .default, handler: nil))
+            topmostController?.present(alert, animated: true, completion: nil)
+        }
         
-        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: agreeTitle, style: .default, handler: { al in action() }))
-        topmostController?.present(alert, animated: true, completion: nil)
+        public static func question(_ message:String, agreeTitle:String, action:@escaping () -> ()) {
+            
+            let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: cancelLabel, style: .destructive, handler: nil))
+            alert.addAction(UIAlertAction(title: agreeTitle, style: .default, handler: { al in action() }))
+            topmostController?.present(alert, animated: true, completion: nil)
+        }
     }
 }

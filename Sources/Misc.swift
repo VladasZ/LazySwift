@@ -8,18 +8,22 @@
 
 import UIKit
 
-public func countryName(from countryCode: String) -> String {
-    
-    if let name = (Locale.current as NSLocale).displayName(forKey: .countryCode, value: countryCode) {
-        return name
+public class Lazy {
+
+    public static func countryName(from countryCode: String) -> String {
+        
+        if let name = (Locale.current as NSLocale).displayName(forKey: .countryCode, value: countryCode) {
+            return name
+        }
+        else {
+            return countryCode
+        }
     }
-    else {
-        return countryCode
+    
+    public static func openSettings() {
+        
+        UIApplication.shared.openURL(NSURL(string:UIApplicationOpenSettingsURLString)! as URL)
     }
 }
 
-public func openSettings() {
-    
-    UIApplication.shared.openURL(NSURL(string:UIApplicationOpenSettingsURLString)! as URL)
-}
 
