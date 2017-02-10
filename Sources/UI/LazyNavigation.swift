@@ -19,7 +19,7 @@ public func presentViewController(_ controller:UIViewController, animated:Bool =
     topController?.present(controller, animated: animated, completion: nil)
 }
 
-var topmostController:UIViewController?
+public var topmostController:UIViewController?
 {
     var topController = UIApplication.shared.keyWindow?.rootViewController;
     

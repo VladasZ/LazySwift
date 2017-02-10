@@ -11,7 +11,7 @@ import UIKit
 
 public class LazyAlert {
     
-    static func show(_ message:String) {
+    public static func show(_ message:String) {
         
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -19,19 +19,18 @@ public class LazyAlert {
         topmostController?.present(alert, animated: true, completion: nil)
     }
     
-    static func error(_ message:String) {
+    public static func error(_ message:String) {
         
         let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         topmostController?.present(alert, animated: true, completion: nil)
     }
     
-    static func question(_ message:String, agreeTitle:String, action:@escaping () -> ()) {
+    public static func question(_ message:String, agreeTitle:String, action:@escaping () -> ()) {
         
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         alert.addAction(UIAlertAction(title: agreeTitle, style: .default, handler: { al in action() }))
         topmostController?.present(alert, animated: true, completion: nil)
     }
-    
 }
