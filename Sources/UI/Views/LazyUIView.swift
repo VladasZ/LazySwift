@@ -173,6 +173,17 @@ public extension UIView {
     
     //MARK: - Other
     
+    func withFrame(_ frame:CGRect) -> Self {
+        
+        self.frame = frame
+        return self
+    }
+    
+    func withFrame(_ x:CGFloat, _ y:CGFloat, _ width:CGFloat, _ height:CGFloat) -> Self {
+        
+        return self.withFrame(CGRect(x, y, width, height))
+    }
+    
     @discardableResult func circle() -> Self {
         
         clipsToBounds = true
