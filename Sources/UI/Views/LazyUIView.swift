@@ -173,6 +173,17 @@ public extension UIView {
     
     //MARK: - Other
     
+    func withColor(_ color:UIColor) -> Self {
+        
+        backgroundColor = color
+        return self
+    }
+    
+    func withColor(_ r:Int, _ g:Int, _ b:Int) -> Self {
+        
+        return self.withColor(UIColor(r, g, b))
+    }
+    
     func withFrame(_ frame:CGRect) -> Self {
         
         self.frame = frame
