@@ -173,6 +173,14 @@ public extension UIView {
     
     //MARK: - Other
     
+    @discardableResult func circle() -> Self {
+        
+        clipsToBounds = true
+        layer.cornerRadius = height / 2
+        
+        return self
+    }
+    
     func removeDummies() {
         
         for view in self.subviews {
