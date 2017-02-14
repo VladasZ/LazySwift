@@ -1,6 +1,6 @@
 //
 //  UIView.swift
-//  iOSSwiftSand
+//  LazySwift
 //
 //  Created by Vladas Zakrevskis on 2/1/17.
 //  Copyright © 2017 Vladas Zakrevskis. All rights reserved.
