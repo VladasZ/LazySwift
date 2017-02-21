@@ -25,7 +25,8 @@ public extension Array {
 
 public extension Array where Element:Equatable {
     
-    func removeDuplicates() -> [Element] {
+    var withoutDuplicates:[Element] {
+        
         var result = [Element]()
         
         for value in self {
