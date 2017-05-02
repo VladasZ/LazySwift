@@ -14,7 +14,7 @@ public extension UIView {
     
     static let dummyTag = "dummy".hash
     
-    static var dummy:UIView {
+    static var dummy: UIView {
         
         let dummy = UIView(CGRect(0, 0, 100, 100))
         dummy.backgroundColor = UIColor.random
@@ -24,12 +24,12 @@ public extension UIView {
     
     //MARK: - Initializators
 
-    convenience init(_ frame:CGRect) {
+    convenience init(_ frame: CGRect) {
         
-        self.init(frame:frame)
+        self.init(frame: frame)
     }
     
-    convenience init(_ x:CGFloat, _ y:CGFloat, _ width:CGFloat, _ height:CGFloat) {
+    convenience init(_ x: CGFloat, _ y: CGFloat, _ width: CGFloat, _ height: CGFloat) {
         
         self.init(frame:CGRect(x, y, width, height))
     }
@@ -41,7 +41,7 @@ public extension UIView {
     
     //MARK: - Geometry
     
-    var width:CGFloat {
+    var width: CGFloat {
         
         get { return self.frame.size.width }
         set {
@@ -52,7 +52,7 @@ public extension UIView {
         }
     }
     
-    var height:CGFloat {
+    var height: CGFloat {
         
         get { return self.frame.size.height }
         set {
@@ -63,7 +63,7 @@ public extension UIView {
         }
     }
     
-    var x:CGFloat {
+    var x: CGFloat {
         
         get { return self.frame.origin.x }
         set {
@@ -74,7 +74,7 @@ public extension UIView {
         }
     }
     
-    var y:CGFloat {
+    var y: CGFloat {
         
         get { return self.frame.origin.y }
         set {
@@ -85,7 +85,7 @@ public extension UIView {
         }
     }
     
-    func set(width:CGFloat, height:CGFloat) {
+    func set(width: CGFloat, height: CGFloat) {
         
         var frame = self.frame
         frame.width = width
