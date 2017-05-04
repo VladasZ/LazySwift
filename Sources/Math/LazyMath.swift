@@ -19,3 +19,9 @@ public func random(_ uniform:Int) -> Int {
     
     return Int(arc4random_uniform(UInt32(uniform)))
 }
+
+@inline(__always)
+public func randomBool() -> Bool {
+    
+    return random() % 2 == 0
+}
