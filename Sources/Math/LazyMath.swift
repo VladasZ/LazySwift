@@ -11,17 +11,17 @@ import Foundation
 @inline(__always)
 public func random() -> Int {
     
-    return Int(arc4random())
+    return Int(UInt32(arc4random()))
 }
 
 @inline(__always)
 public func random(_ uniform:Int) -> Int {
     
-    return Int(arc4random_uniform(UInt32(uniform)))
+    return Int(UInt32(arc4random_uniform(UInt32(uniform))))
 }
 
 @inline(__always)
 public func randomBool() -> Bool {
     
-    return random() % 2 == 0
+    return UInt32(arc4random()) % UInt32(2) == 0
 }
