@@ -8,6 +8,11 @@
 
 import Foundation
 
+public func onMain(_ action: @escaping () -> ()) {
+    
+    DispatchQueue.main.async(execute: action)
+}
+
 public func after(_ delay: Double, action: @escaping () -> ()) {
     
     let when = DispatchTime.now() + delay
