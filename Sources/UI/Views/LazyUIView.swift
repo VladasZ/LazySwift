@@ -224,7 +224,7 @@ public extension UIView {
     
     func makeHoleAt(_ rect: CGRect) {
         
-        let backgroundPath = UIBezierPath(rect: frame)
+        let backgroundPath = UIBezierPath(rect: CGRect(0, 0, width, height))
         let circlePath     = UIBezierPath(ovalIn: rect)
         
         circlePath.append(backgroundPath)
