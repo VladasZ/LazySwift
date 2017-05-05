@@ -211,6 +211,19 @@ public extension UIView {
             }
         }
     }
+    
+    func makeHoleAt(_ rect: CGRect) {
+        
+        let backgroundPath = UIBezierPath(rect: frame)
+        let circlePath     = UIBezierPath(ovalIn: CGRect(x: 20, y: 20, width: 50, height: 50))
+        
+        circlePath.append(backgroundPath)
+        
+        let mask = CAShapeLayer()
+        mask.path = circlePath.cgPath
+        mask.fillRule = kCAFillRuleEvenOdd
+        self.layer.mask = mask
+    }
 }
 
 
