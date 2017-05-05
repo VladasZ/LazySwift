@@ -212,10 +212,20 @@ public extension UIView {
         }
     }
     
+    func makeHoleAtCenterWithRadius(_ radius: CGFloat) {
+        
+        let holeFrame = CGRect(frame.size.width / 2 - radius,
+                               frame.size.height / 2 - radius,
+                               radius * 2,
+                               radius * 2)
+        
+        makeHoleAt(holeFrame)
+    }
+    
     func makeHoleAt(_ rect: CGRect) {
         
         let backgroundPath = UIBezierPath(rect: frame)
-        let circlePath     = UIBezierPath(ovalIn: CGRect(x: 20, y: 20, width: 50, height: 50))
+        let circlePath     = UIBezierPath(ovalIn: rect)
         
         circlePath.append(backgroundPath)
         
