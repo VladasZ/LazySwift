@@ -173,26 +173,39 @@ public extension UIView {
     
     //MARK: - Other
     
-    func withColor(_ color:UIColor) -> Self {
+    @discardableResult func withColor(_ color:UIColor) -> Self {
         
         backgroundColor = color
         return self
     }
     
-    func withColor(_ r:Int, _ g:Int, _ b:Int) -> Self {
+    @discardableResult func withColor(_ r:Int, _ g:Int, _ b:Int) -> Self {
         
         return self.withColor(UIColor(r, g, b))
     }
     
-    func withFrame(_ frame:CGRect) -> Self {
+    @discardableResult func withFrame(_ frame:CGRect) -> Self {
         
         self.frame = frame
         return self
     }
     
-    func withFrame(_ x:CGFloat, _ y:CGFloat, _ width:CGFloat, _ height:CGFloat) -> Self {
+    @discardableResult func withFrame(_ x:CGFloat, _ y:CGFloat, _ width:CGFloat, _ height:CGFloat) -> Self {
         
         return self.withFrame(CGRect(x, y, width, height))
+    }
+    
+    @discardableResult func withSize(_ size: CGSize) -> Self {
+        
+        var frame = self.frame
+        frame.size = size
+        self.frame = frame
+        return self
+    }
+    
+    @discardableResult func withSize(_ width: CGFloat, _ height: CGFloat) -> Self {
+        
+        return self.withSize(CGSize(width: width, height: height))
     }
     
     @discardableResult func circle() -> Self {
