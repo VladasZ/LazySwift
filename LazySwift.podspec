@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name           = 'LazySwift'
-s.version        = '0.3.10'
+s.version        = '0.3.11'
 s.summary        = "Swift extensions for lazy coding."
 s.homepage       = "https://github.com/VladasZ/LazySwift"
 s.author         = { 'Vladas Zakrevskis' => '146100@gmail.com' }

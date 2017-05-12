@@ -249,4 +249,31 @@ public extension UIView {
     }
 }
 
+//MARK: - Animations
+
+fileprivate let ANIMATION_DURATION:TimeInterval = 0.211
+
+
+public extension UIView {
+    
+    public func hideAnimated() {
+        
+        UIView.animate(withDuration: ANIMATION_DURATION,
+                       animations: { self.alpha = 0},
+                       completion: { _ in self.isHidden = true })
+    }
+    
+    public func showAnimated() {
+        
+        self.isHidden = false
+        UIView.animate(withDuration: ANIMATION_DURATION) { self.alpha = 1 }
+    }
+    
+    public func setBackgroundColorAnimated(_ color:UIColor) {
+        
+        UIView.animate(withDuration: ANIMATION_DURATION) { self.backgroundColor = color }
+    }
+    
+}
+
 
