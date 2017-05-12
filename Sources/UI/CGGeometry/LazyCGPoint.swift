@@ -10,7 +10,7 @@ import UIKit
 
 public extension CGPoint {
     
-    init(_ x:CGFloat, _ y: CGFloat) {
+    init(_ x: CGFloat, _ y: CGFloat) {
         
         self.init(x:x, y:y)
     }
