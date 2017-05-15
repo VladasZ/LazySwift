@@ -10,7 +10,7 @@ import UIKit
 
 fileprivate struct LazyRecognizer {
     
-    var view: UIView
+    weak var view: UIView?
     var action: () -> ()
 }
 
