@@ -37,5 +37,10 @@ public extension Array where Element:Equatable {
         
         return result
     }
+    
+    var randomElement: Element {
+        
+        return self[Int(arc4random_uniform(UInt32(count)))]
+    }
 }
 
