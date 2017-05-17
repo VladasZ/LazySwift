@@ -37,6 +37,9 @@ public extension Array where Element:Equatable {
         
         return result
     }
+}
+
+public extension Array {
     
     var randomElement: Element {
         
