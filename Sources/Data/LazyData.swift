@@ -12,6 +12,7 @@ public extension Data {
     
     public var JSONString: String {
         
+        
         return String(data: self, encoding: .utf8) ?? "not a JSONString"
     }
 }

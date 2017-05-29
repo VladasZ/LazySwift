@@ -41,4 +41,11 @@ public extension String {
         
         return  String(self.characters.prefix(ind)) + string + String(self.characters.suffix(self.characters.count - ind))
     }
+    
+    private static let nums: Set<Character> = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    
+    public var isNumeric: Bool {
+        guard self.characters.count > 0 else { return false }
+        return Set(self.characters).isSubset(of: String.nums)
+    }
 }
