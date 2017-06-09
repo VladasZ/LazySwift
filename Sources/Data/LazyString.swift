@@ -52,6 +52,15 @@ public extension String {
     
     public var withoutLetters: String {
         
-        return trimmingCharacters(in: CharacterSet(charactersIn: "01234567890.").inverted)
+        return components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
     }
+
+    public func remove(_ characters: String) -> String {
+        
+        return components(separatedBy: CharacterSet(charactersIn: characters)).joined()
+    }
+
 }
+
+
+
