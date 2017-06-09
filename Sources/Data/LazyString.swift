@@ -48,4 +48,10 @@ public extension String {
         guard self.characters.count > 0 else { return false }
         return Set(self.characters).isSubset(of: String.nums)
     }
+    
+    
+    public var withoutLetters: String {
+        
+        return trimmingCharacters(in: CharacterSet(charactersIn: "01234567890.").inverted)
+    }
 }
