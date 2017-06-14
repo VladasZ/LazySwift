@@ -19,7 +19,7 @@ public func after(_ delay: Double, action: @escaping () -> ()) {
     DispatchQueue.main.asyncAfter(deadline: when, execute: action)
 }
 
-func += <K, V> ( left: inout [K:V], right: [K:V]) {
+public func += <K, V> ( left: inout [K:V], right: [K:V]) {
     for (k, v) in right {
         left[k] = v
     }
