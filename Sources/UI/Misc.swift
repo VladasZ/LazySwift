@@ -18,3 +18,9 @@ public func after(_ delay: Double, action: @escaping () -> ()) {
     let when = DispatchTime.now() + delay
     DispatchQueue.main.asyncAfter(deadline: when, execute: action)
 }
+
+func += <K, V> ( left: inout [K:V], right: [K:V]) {
+    for (k, v) in right {
+        left[k] = v
+    }
+}
