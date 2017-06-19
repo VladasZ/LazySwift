@@ -26,7 +26,7 @@ fileprivate class LazyRecognizersManager {
 
 public extension UIView {
     
-    func onTap(_ action: @escaping () -> ()) {
+    public func onTap(_ action: @escaping () -> ()) {
         
         let recognizer = UITapGestureRecognizer(target: LazyRecognizersManager.self, action: #selector(LazyRecognizersManager.handleTap(_:)))
         
